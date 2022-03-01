@@ -24,11 +24,15 @@ runs:
       - name: Install renv
         run: |
           Rscript -e 'install.packages(c("renv"))'
+        shell: bash
+
           
       - name: Install rmarkdown & bookdown
         run: |
           Rscript -e 'renv::install("bookdown@0.24")'
           Rscript -e 'renv::install("rmarkdown@2.11")'
+        shell: bash
+
 #        run: Rscript -e 'renv::restore()'
 #        run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
 
@@ -72,12 +76,16 @@ runs:
 
       - name: Clone template files
         run: git clone https://github.com/warhornmedia/classics-template-files.git
+        shell: bash
+
 
       - name: Run Build Script
         run: |
           mv classics-template-files/scripts/*.sh .
           chmod +x ./_buildGHA.sh
           ./_buildGHA.sh
+        shell: bash
+
 
 #      - name: Install fonts
 #        run: |
