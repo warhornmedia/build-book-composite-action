@@ -1,5 +1,5 @@
-name: renderbook
-description: "Render a book..."
+name: "Render Classics work"
+description: "Render a work for Warhorn Classics..."
 
 runs: 
   using: "composite"
@@ -24,14 +24,14 @@ runs:
       - name: Install renv
         run: |
           Rscript -e 'install.packages(c("renv"))'
-        shell: bash
+        shell: zsh
 
           
       - name: Install rmarkdown & bookdown
         run: |
           Rscript -e 'renv::install("bookdown@0.24")'
           Rscript -e 'renv::install("rmarkdown@2.11")'
-        shell: bash
+        shell: zsh
 
 #        run: Rscript -e 'renv::restore()'
 #        run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
@@ -76,7 +76,7 @@ runs:
 
       - name: Clone template files
         run: git clone https://github.com/warhornmedia/classics-template-files.git
-        shell: bash
+        shell: zsh
 
 
       - name: Run Build Script
@@ -84,7 +84,7 @@ runs:
           mv classics-template-files/scripts/*.sh .
           chmod +x ./_buildGHA.sh
           ./_buildGHA.sh
-        shell: bash
+        shell: zsh
 
 
 #      - name: Install fonts
