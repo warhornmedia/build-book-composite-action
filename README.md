@@ -1,7 +1,7 @@
 # custom-actions
 Action for reproducible book builds
 
-## v0.1 info
+## v0.2 info
 
 - r-version: '4.1.2'
 - pandoc-version: '2.14.2'
