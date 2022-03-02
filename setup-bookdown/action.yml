@@ -50,8 +50,8 @@ runs:
 
       - name: Install rmarkdown & bookdown
         run: |
-          Rscript -e 'renv::install("rmarkdown@2.11")'
-          Rscript -e 'renv::install("bookdown@0.24")'
+          Rscript -e 'renv::install("rmarkdown@${{ inputs.rmarkdown-version }}")'
+          Rscript -e 'renv::install("bookdown@${{ inputs.bookdown-version }}")'
         shell: bash
 
 
