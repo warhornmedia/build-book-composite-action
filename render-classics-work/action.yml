@@ -15,6 +15,9 @@ runs:
         run: echo "${{ github.action_path }}" >> $GITHUB_PATH
         shell: bash
         
-      - name: Run Build Script
-        run: build_script.sh
+      - name: Do extra Warhorn Classics setup
+        run: classics_extras.sh
         shell: bash
+
+      - name: Build the book
+        uses: warhornmedia/custom-actions/build-book@v0.2
