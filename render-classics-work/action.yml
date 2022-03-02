@@ -79,5 +79,5 @@ runs:
         shell: bash
 
       - name: Run Build Script
-        run: build_script.sh
+        run: ./build_script.sh
         shell: sh
