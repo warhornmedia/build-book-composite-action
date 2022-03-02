@@ -78,8 +78,10 @@ runs:
         run: git clone https://github.com/warhornmedia/classics-template-files.git
         shell: bash
 
-      - name: Run Build Script
+      - name: Add path to build script
         run: echo "${{ github.action_path }}" >> $GITHUB_PATH
-        shell: bash          
+        shell: bash
+        
+      - name: Run Build Script  
         run: build_script.sh
         shell: bash
