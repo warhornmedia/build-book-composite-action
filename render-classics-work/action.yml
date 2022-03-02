@@ -79,5 +79,7 @@ runs:
         shell: bash
 
       - name: Run Build Script
-        run: ./render-classics-work/build_script.sh
+        run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+        shell: bash          
+        run: build_script.sh
         shell: bash
