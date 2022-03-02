@@ -79,5 +79,5 @@ runs:
         shell: bash
 
       - name: Run Build Script
-        run: render-classics-work/build_script.sh
+        run: ./render-classics-work/build_script.sh
         shell: bash
