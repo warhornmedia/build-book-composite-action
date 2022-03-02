@@ -11,6 +11,10 @@ Action for reproducible book builds
 
 ## How to use these Github Action scripts
 
+In general, if you are building a Warhorn Classics book, you don't need to worry about these, as the correct automation is already in place. However, two of these scripts, setup-bookdown and build-book, could be useful for anybody who wants to automate building a bookdown book with consistent results and easy control over the various software versions used.
+
+## Script details
+
 ### render-classics-work
 
 This is a script that will do everything necessary to create a Warhorn Classics work via bookdown. Afterwards, it needs only to be deployed. 
