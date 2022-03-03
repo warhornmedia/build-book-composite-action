@@ -52,7 +52,7 @@ runs:
         run: |
           Rscript -e 'renv::install("rmarkdown@${{ inputs.rmarkdown-version }}")'
           Rscript -e 'renv::install("bookdown@${{ inputs.bookdown-version }}")'
-          Rscript -e 'renv::install(bslib, downlit, xml2)'
+          Rscript -e 'install.packages(c("bslib", "downlit", "xml2"))
         shell: bash
 
 
