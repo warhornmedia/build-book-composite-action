@@ -2,8 +2,8 @@
 
 set -ev
 
-# render web version
-Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
+# render web version? What gets rendered if we don't specify output type?
+Rscript -e "bookdown::render_book('index.Rmd')"
 
 # Lookup what other formats are supposed to be available for download, no error if not found
 formats="$(grep 'download:' _output.yml || test $? = 1; )"
