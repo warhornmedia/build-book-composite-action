@@ -5,8 +5,8 @@ set -ev
 # render web version
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
 
-# Lookup what other formats are supposed to be available for download
-formats="$(grep 'download:' _output.yml)"
+# Lookup what other formats are supposed to be available for download, no error if not found
+formats="$(grep 'download:' _output.yml || test $? = 1; )"
 
 # if PDF is in the download list
 if [[ $formats == *"pdf"* ]]; then
