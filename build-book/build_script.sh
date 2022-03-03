@@ -2,7 +2,7 @@
 
 set -ev
 
-# render web version? What gets rendered if we don't specify output type?
+# render web version (either gitbook or bs4_book are supported)
 Rscript -e "bookdown::render_book('index.Rmd')"
 
 # Lookup what other formats are supposed to be available for download, no error if not found

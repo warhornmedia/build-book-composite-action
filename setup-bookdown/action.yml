@@ -48,7 +48,7 @@ runs:
           Rscript -e 'install.packages(c("renv"))'
         shell: bash
 
-      - name: Install rmarkdown & bookdown
+      - name: Install rmarkdown, bookdown, & bs4_book pre-reqs
         run: |
           Rscript -e 'renv::install("rmarkdown@${{ inputs.rmarkdown-version }}")'
           Rscript -e 'renv::install("bookdown@${{ inputs.bookdown-version }}")'

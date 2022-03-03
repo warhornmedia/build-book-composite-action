@@ -5,7 +5,7 @@ runs:
   using: "composite"
   steps:
       - uses: actions/checkout@v2
-      - uses: warhornmedia/custom-actions/setup-bookdown@HEAD
+      - uses: warhornmedia/custom-actions/setup-bookdown@v0.4
 
       - name: Clone Warhorn Classics template files
         run: git clone https://github.com/warhornmedia/classics-template-files.git
@@ -20,4 +20,4 @@ runs:
         shell: bash
 
       - name: Build the book
-        uses: warhornmedia/custom-actions/build-book@HEAD
+        uses: warhornmedia/custom-actions/build-book@v0.4
