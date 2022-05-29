@@ -31,6 +31,13 @@ runs:
         with:
           r-version: ${{ inputs.r-version }}
 
+      - name: Create and populate .Renviron file
+        run: |
+          echo GITHUB_PAT="$MAPPED_GITHUB_PAT" >> ~/.Renviron
+        shell: bash
+        env:
+          MAPPED_GITHUB_PAT: ${{ GITHUB_PAT }}
+
       - name: Install Pandoc
         uses: r-lib/actions/setup-pandoc@v2
         with:
