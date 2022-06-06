@@ -11,7 +11,8 @@ inputs:
     required: false
   tinytex-version:
     description: 'The TinyTeX version to use'
-    default: '2021.11'
+    # default: '2021.11'
+    default: 'https://texlive.info/tlnet-archive/2021/11/30/tlnet/'
     required: false
   rmarkdown-version:
     description: 'The rmarkdown version to use'
@@ -41,8 +42,9 @@ runs:
         env:
           # install full prebuilt version
           TINYTEX_INSTALLER: TinyTeX
-          TINYTEX_VERSION: ${{ inputs.tinytex-version }}
-
+          CTAN_REPO: ${{ inputs.tinytex-version }}
+          # TINYTEX_VERSION: ${{ inputs.tinytex-version }}
+          
       - name: Install renv
         run: |
           Rscript -e 'install.packages(c("renv"))'
