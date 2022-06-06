@@ -3,24 +3,24 @@ description: "Install bookdown and prereqs..."
 inputs:
   r-version:
     description: 'The R version to use'
-    default: '4.1.2'
+    default: '4.2.0'
     required: false
   pandoc-version:
     description: 'The Pandoc version to use'
-    default: '2.14.2'
+    default: '2.18'
     required: false
   tinytex-version:
     description: 'The TinyTeX version to use'
     # default: '2021.11'
-    default: 'https://texlive.info/tlnet-archive/2021/11/30/tlnet/'
+    default: 'https://texlive.info/tlnet-archive/2022/05/02/tlnet/'
     required: false
   rmarkdown-version:
     description: 'The rmarkdown version to use'
-    default: '2.11'
+    default: '2.14'
     required: false
   bookdown-version:
     description: 'The bookdown version to use'
-    default: '0.24'
+    default: '0.26'
     required: false
   
   
