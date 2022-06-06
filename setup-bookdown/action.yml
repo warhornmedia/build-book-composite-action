@@ -37,7 +37,7 @@ runs:
           echo GITHUB_PAT="$MAPPED_GITHUB_PAT" >> ~/.Renviron
         shell: bash
         env:
-          MAPPED_GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+          MAPPED_GITHUB_PAT: ${{ github.token }}
 
       - name: Install Pandoc
         uses: r-lib/actions/setup-pandoc@v2
