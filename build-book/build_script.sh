@@ -25,7 +25,9 @@ if [[ $formats == *"mobi"* || $formats == *"azw3"* || $formats == *"kfx"* ]]; th
   if [[ $formats == *"kfx"* ]]; then
   	# Once again, there's no good way to pick which version of kindle-previewer we want...
     brew install --cask kindle-previewer
-    curl  https://plugins.calibre-ebook.com/272407.zip --output plugin.zip
+	# Install kfxlib (KFX Output) plugin (this url is always the latest version)
+	# documentation: https://www.mobileread.com/forums/showthread.php?t=272407
+    curl  https://plugins.calibre-ebook.com/272407.zip --output plugin.zip 
     calibre-customize -a plugin.zip
     Rscript -e 'load(file="./.Rdata"); cmd0 = paste("calibre-debug -r \"KFX Output\" -- ", epubFile,sep=""); kfxFile <- system(cmd0,intern=FALSE);'
     # Somehow the book is going into the "_book" folder, which is where we want it. Don't ask me how.
