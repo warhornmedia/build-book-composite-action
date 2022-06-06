@@ -32,6 +32,13 @@ runs:
         with:
           r-version: ${{ inputs.r-version }}
 
+      - name: Create and populate .Renviron file with automatic token (not actually PAT)
+        run: |
+          echo GITHUB_PAT="$MAPPED_GITHUB_PAT" >> ~/.Renviron
+        shell: bash
+        env:
+          MAPPED_GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Install Pandoc
         uses: r-lib/actions/setup-pandoc@v2
         with:
