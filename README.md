@@ -1,6 +1,14 @@
 # custom-actions
 Action for reproducible book builds
 
+## v0.5 version info
+
+- r version: 4.2.0
+- pandoc version: 2.18
+- tinytex version: https://texlive.info/tlnet-archive/2022/05/02/tlnet/
+- bookdown version: 0.26
+- rmarkdown version: 2.14
+
 ## v0.2 version info
 
 - r version: 4.1.2
