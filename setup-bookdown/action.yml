@@ -7,7 +7,7 @@ inputs:
     required: false
   pandoc-version:
     description: 'The Pandoc version to use'
-    default: '2.18'
+    default: '2.19.2'
     required: false
   tinytex-version:
     description: 'The TinyTeX version to use'

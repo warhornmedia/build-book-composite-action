@@ -1,7 +1,11 @@
 # custom-actions
 Action for reproducible book builds
 
-## v0.6 version info
+## v0.6.3 version info
+
+- pandoc version: 2.19.2
+
+## v0.6.2 version info
 
 - keeps files (artifacts) from failed builds for download and examination
 
