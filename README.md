@@ -1,6 +1,10 @@
 # custom-actions
 Action for reproducible book builds
 
+## v0.6 version info
+
+- keeps files (artifacts) from failed builds for download and examination
+
 ## v0.5 version info
 
 - r version: 4.2.0

@@ -11,3 +11,10 @@ runs:
       - name: Run Build Script
         run: build_script.sh
         shell: bash
+
+      - name: Upload book folder for debug
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: book-dir
+          path: _book
