@@ -1,6 +1,10 @@
 # custom-actions
 Action for reproducible book builds
 
+## v0.6.4 version info
+
+- tinytex version: https://texlive.info/tlnet-archive/2022/09/11/tlnet/
+
 ## v0.6.3 version info
 
 - pandoc version: 2.19.2
