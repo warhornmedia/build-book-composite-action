@@ -33,6 +33,7 @@ runs:
           r-version: ${{ inputs.r-version }}
 
       - name: Create and populate .Renviron file with automatic token (not actually PAT)
+        # allows verified github downloads, so no worrying about anon use limits causing builds to fail
         run: |
           echo GITHUB_PAT="$MAPPED_GITHUB_PAT" >> ~/.Renviron
         shell: bash
