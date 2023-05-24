@@ -1,6 +1,11 @@
 # custom-actions
 Action for reproducible book builds
 
+## v0.6.5 version info
+- R -> 4.3
+- rmarkdown -> 2.21
+- bookdown -> 0.34
+
 ## v0.6.4 version info
 
 - tinytex version: https://texlive.info/tlnet-archive/2022/09/11/tlnet/
