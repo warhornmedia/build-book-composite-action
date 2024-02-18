@@ -3,7 +3,7 @@ description: "Install bookdown and prereqs..."
 inputs:
   r-version:
     description: 'The R version to use'
-    default: '4.3.0'
+    default: '4.3.2'
     required: false
   pandoc-version:
     description: 'The Pandoc version to use'
@@ -16,11 +16,11 @@ inputs:
     required: false
   rmarkdown-version:
     description: 'The rmarkdown version to use'
-    default: '2.21'
+    default: '2.25'
     required: false
   bookdown-version:
     description: 'The bookdown version to use'
-    default: '0.34'
+    default: '0.37'
     required: false
   
   
