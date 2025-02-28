@@ -14,7 +14,7 @@ runs:
 
       - name: Upload book folder for debug
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: book-dir
           path: ./
